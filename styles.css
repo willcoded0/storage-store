@@ -1,0 +1,387 @@
+:root {
+  --bg: #f6efe5;
+  --paper: #fff9f3;
+  --ink: #1e1a18;
+  --muted: #6f635a;
+  --accent: #d24d1f;
+  --accent-dark: #9b3411;
+  --gold: #f0b43c;
+  --line: rgba(30, 26, 24, 0.12);
+  --shadow: 0 18px 60px rgba(40, 22, 8, 0.16);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Space Grotesk", sans-serif;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at top left, rgba(240, 180, 60, 0.24), transparent 28%),
+    radial-gradient(circle at right 20%, rgba(210, 77, 31, 0.18), transparent 22%),
+    linear-gradient(180deg, #fff8f0 0%, var(--bg) 100%);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.site-header,
+.site-footer,
+.hero,
+.metrics-strip,
+.products,
+.why-us,
+.ad-section,
+.details-main {
+  width: min(1120px, calc(100% - 2rem));
+  margin: 0 auto;
+}
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 0;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.brand-mark {
+  width: 2.6rem;
+  height: 2.6rem;
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--accent), var(--gold));
+  color: white;
+  font-weight: 700;
+}
+
+.brand strong,
+.brand small,
+.site-nav a,
+.button,
+.eyebrow,
+.price,
+.product-badge,
+.ad-label {
+  letter-spacing: 0.02em;
+}
+
+.brand small {
+  display: block;
+  color: var(--muted);
+}
+
+.site-nav {
+  display: flex;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+}
+
+.site-nav a {
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 2rem;
+  align-items: center;
+  padding: 3rem 0 2rem;
+}
+
+.eyebrow {
+  margin: 0 0 0.9rem;
+  color: var(--accent-dark);
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Fraunces", serif;
+  line-height: 1;
+  margin: 0;
+}
+
+h1 {
+  font-size: clamp(2.9rem, 7vw, 5.6rem);
+  max-width: 10ch;
+}
+
+h2 {
+  font-size: clamp(2rem, 4vw, 3.1rem);
+  margin-bottom: 0.8rem;
+}
+
+h3 {
+  font-size: 1.45rem;
+  margin-bottom: 0.8rem;
+}
+
+p,
+li {
+  line-height: 1.6;
+}
+
+.hero-text,
+.section-heading p,
+.feature-panel p,
+.spec-card p,
+.faq-list p {
+  color: var(--muted);
+  max-width: 62ch;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin: 1.5rem 0;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.9rem 1.3rem;
+  border-radius: 999px;
+  font-weight: 700;
+}
+
+.button-primary {
+  background: var(--ink);
+  color: white;
+}
+
+.button-secondary {
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.hero-points {
+  padding-left: 1.1rem;
+  color: var(--muted);
+}
+
+.hero-visual {
+  display: grid;
+  gap: 1rem;
+  justify-items: center;
+}
+
+.can-card {
+  width: min(300px, 80vw);
+  border-radius: 2rem;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  background: white;
+  transform: rotate(-8deg);
+}
+
+.can-top,
+.can-base {
+  height: 1.4rem;
+  background: linear-gradient(90deg, #d9d0c7, #fdf8f1, #b9aea1);
+}
+
+.can-body {
+  min-height: 360px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+  background:
+    radial-gradient(circle at top right, rgba(255,255,255,0.3), transparent 30%),
+    linear-gradient(180deg, #ef6f34, #c33d10);
+  color: white;
+}
+
+.can-flavor,
+.can-tag {
+  font-weight: 500;
+}
+
+.can-name {
+  font-family: "Fraunces", serif;
+  font-size: 3.1rem;
+  line-height: 0.95;
+  margin: 0.4rem 0;
+}
+
+.hidden-drawer {
+  padding: 0.9rem 1rem;
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid var(--line);
+  color: var(--muted);
+}
+
+.metrics-strip {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.metrics-strip div,
+.product-card,
+.feature-panel,
+.benefit-grid article,
+.ad-card,
+.spec-card,
+.faq-list article {
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--line);
+  border-radius: 1.4rem;
+  box-shadow: var(--shadow);
+}
+
+.metrics-strip div {
+  padding: 1rem 1.1rem;
+}
+
+.metrics-strip strong {
+  display: block;
+  margin-bottom: 0.35rem;
+}
+
+.metrics-strip span {
+  color: var(--muted);
+}
+
+.products,
+.why-us,
+.ad-section,
+.details-main {
+  padding: 4.5rem 0 1rem;
+}
+
+.section-heading {
+  margin-bottom: 1.5rem;
+}
+
+.product-grid,
+.details-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.2rem;
+}
+
+.product-card,
+.feature-panel,
+.spec-card,
+.faq-list article {
+  padding: 1.5rem;
+}
+
+.product-badge,
+.ad-label {
+  display: inline-block;
+  margin-bottom: 0.8rem;
+  color: var(--accent-dark);
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.price {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin: 0 0 1rem;
+}
+
+.text-link {
+  color: var(--accent-dark);
+  font-weight: 700;
+}
+
+.benefit-grid,
+.faq-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.benefit-grid article {
+  padding: 1.4rem;
+}
+
+.ad-card {
+  padding: 1.7rem;
+  background:
+    linear-gradient(135deg, rgba(240, 180, 60, 0.18), rgba(210, 77, 31, 0.18)),
+    rgba(255,255,255,0.82);
+}
+
+.site-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 3rem 0 4rem;
+  color: var(--muted);
+}
+
+.footer-links {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.details-main {
+  padding-top: 2rem;
+}
+
+.details-hero {
+  padding: 2rem 0 0.5rem;
+}
+
+.usage-section,
+.faq-section {
+  padding: 3rem 0 1rem;
+}
+
+@media (max-width: 900px) {
+  .hero,
+  .metrics-strip,
+  .product-grid,
+  .benefit-grid,
+  .details-grid,
+  .faq-list,
+  .site-footer {
+    grid-template-columns: 1fr;
+    flex-direction: column;
+  }
+
+  .hero {
+    padding-top: 2rem;
+  }
+
+  .site-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  h1 {
+    max-width: 12ch;
+  }
+}
