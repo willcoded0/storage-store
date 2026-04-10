@@ -69,6 +69,35 @@ a {
   font-weight: 700;
 }
 
+.asset-slot {
+  position: relative;
+  overflow: hidden;
+}
+
+.asset-slot img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.asset-placeholder {
+  position: relative;
+  z-index: 0;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 0.75rem;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
 .brand strong,
 .brand small,
 .site-nav a,
@@ -188,41 +217,21 @@ li {
 
 .can-card {
   width: min(300px, 80vw);
+  min-height: 420px;
+  display: grid;
+  place-items: center;
   border-radius: 2rem;
-  overflow: hidden;
   box-shadow: var(--shadow);
-  background: white;
-  transform: rotate(-8deg);
-}
-
-.can-top,
-.can-base {
-  height: 1.4rem;
-  background: linear-gradient(90deg, #d9d0c7, #fdf8f1, #b9aea1);
-}
-
-.can-body {
-  min-height: 360px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 2rem;
   background:
-    radial-gradient(circle at top right, rgba(255,255,255,0.3), transparent 30%),
-    linear-gradient(180deg, #ef6f34, #c33d10);
-  color: white;
+    linear-gradient(135deg, rgba(240, 180, 60, 0.2), rgba(210, 77, 31, 0.2)),
+    rgba(255, 255, 255, 0.92);
+  transform: rotate(-8deg);
+  border: 1px dashed rgba(30, 26, 24, 0.25);
 }
 
-.can-flavor,
-.can-tag {
-  font-weight: 500;
-}
-
-.can-name {
-  font-family: "Fraunces", serif;
-  font-size: 3.1rem;
-  line-height: 0.95;
-  margin: 0.4rem 0;
+.asset-slot-large .asset-placeholder {
+  color: var(--accent-dark);
+  font-size: 1rem;
 }
 
 .hidden-drawer {

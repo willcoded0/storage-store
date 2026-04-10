@@ -13,7 +13,10 @@
 <body>
   <header class="site-header">
     <a class="brand" href="index.html">
-      <span class="brand-mark">S</span>
+      <span class="brand-mark asset-slot" aria-label="Logo placeholder">
+        <img src="assets/logo.png" alt="SnackSafe logo" onerror="this.style.display='none'">
+        <span class="asset-placeholder">Placeholder</span>
+      </span>
       <span>
         <strong>SnackSafe</strong>
         <small>Storage</small>
@@ -45,16 +48,11 @@
           <li>Playful design for students and young adults</li>
         </ul>
       </div>
-      <div class="hero-visual" aria-hidden="true">
-        <div class="can-card">
-          <div class="can-top"></div>
-          <div class="can-body">
-            <span class="can-flavor">Original</span>
-            <span class="can-name">SnackSafe</span>
-            <span class="can-tag">Secret shelf storage</span>
-          </div>
-          <div class="can-base"></div>
-        </div>
+      <div class="hero-visual">
+        <figure class="can-card asset-slot asset-slot-large">
+          <img src="assets/product-can.png" alt="Original SnackSafe secret storage product image" onerror="this.style.display='none'">
+          <figcaption class="asset-placeholder">Placeholder</figcaption>
+        </figure>
         <div class="hidden-drawer">False-bottom compartment for small valuables</div>
       </div>
     </section>
