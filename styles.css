@@ -333,13 +333,8 @@ li {
   width: 1.2rem;
 }
 
-.carousel-slide-transparent img,
 .brand-mark img {
   mix-blend-mode: multiply;
-}
-
-.carousel-slide-transparent img {
-  filter: contrast(1.08) brightness(0.98);
 }
 
 .asset-slot-large .asset-placeholder {
