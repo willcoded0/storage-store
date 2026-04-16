@@ -316,6 +316,13 @@ li {
   width: 1.2rem;
 }
 
+.carousel-slide:nth-child(1),
+.carousel-slide:nth-child(3) {
+  background: transparent;
+  box-shadow: none;
+  border: none;
+}
+
 .asset-slot-large .asset-placeholder {
   color: var(--accent-dark);
   font-size: 1rem;
