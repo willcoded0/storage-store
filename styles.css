@@ -323,6 +323,11 @@ li {
   border: none;
 }
 
+.carousel-slide:nth-child(1) img,
+.carousel-slide:nth-child(3) img {
+  mix-blend-mode: multiply;
+}
+
 .asset-slot-large .asset-placeholder {
   color: var(--accent-dark);
   font-size: 1rem;
