@@ -338,6 +338,10 @@ li {
   mix-blend-mode: multiply;
 }
 
+.carousel-slide-transparent img {
+  filter: contrast(1.08) brightness(0.98);
+}
+
 .asset-slot-large .asset-placeholder {
   color: var(--accent-dark);
   font-size: 1rem;
