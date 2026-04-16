@@ -83,6 +83,10 @@ a {
   z-index: 1;
 }
 
+.brand-mark img {
+  mix-blend-mode: multiply;
+}
+
 .asset-placeholder {
   position: relative;
   z-index: 0;
