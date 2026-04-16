@@ -49,10 +49,23 @@
         </ul>
       </div>
       <div class="hero-visual">
-        <figure class="can-card asset-slot asset-slot-large">
-          <img src="assets/product-can.png" alt="Original SnackSafe secret storage product image" onerror="this.style.display='none'">
-          <figcaption class="asset-placeholder">Placeholder</figcaption>
-        </figure>
+        <div class="carousel">
+          <div class="carousel-track">
+            <figure class="can-card carousel-slide">
+              <img src="assets/product-can-main.png" alt="SnackSafe product can">
+            </figure>
+            <figure class="can-card carousel-slide">
+              <img src="assets/product-can.png" alt="SnackSafe hidden in pantry">
+            </figure>
+            <figure class="can-card carousel-slide">
+              <img src="assets/product-detail.jpg" alt="SnackSafe internal compartment">
+            </figure>
+          </div>
+          <div class="carousel-nav">
+            <button class="carousel-btn" id="carousel-prev" aria-label="Previous image">&#8592;</button>
+            <button class="carousel-btn" id="carousel-next" aria-label="Next image">&#8594;</button>
+          </div>
+        </div>
         <div class="hidden-drawer">False-bottom compartment for small valuables</div>
       </div>
     </section>
@@ -154,5 +167,14 @@
       <a href="#why">Why It Works</a>
     </div>
   </footer>
+  <script>
+    const track = document.querySelector('.carousel-track');
+    document.getElementById('carousel-prev').addEventListener('click', () => {
+      track.scrollBy({ left: -track.offsetWidth, behavior: 'smooth' });
+    });
+    document.getElementById('carousel-next').addEventListener('click', () => {
+      track.scrollBy({ left: track.offsetWidth, behavior: 'smooth' });
+    });
+  </script>
 </body>
 </html>

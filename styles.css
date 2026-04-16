@@ -229,6 +229,66 @@ li {
   border: 1px dashed rgba(30, 26, 24, 0.25);
 }
 
+.carousel {
+  display: grid;
+  gap: 0.75rem;
+  justify-items: center;
+}
+
+.carousel-track {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  width: min(300px, 80vw);
+}
+
+.carousel-track::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-slide {
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+  margin: 0;
+  transform: none;
+  width: min(300px, 80vw);
+  overflow: hidden;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 2rem;
+  display: block;
+}
+
+.carousel-nav {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.carousel-btn {
+  background: var(--ink);
+  color: white;
+  border: none;
+  border-radius: 999px;
+  width: 2.2rem;
+  height: 2.2rem;
+  cursor: pointer;
+  font-size: 1rem;
+  display: grid;
+  place-items: center;
+  transition: background 0.15s;
+}
+
+.carousel-btn:hover {
+  background: var(--accent);
+}
+
 .asset-slot-large .asset-placeholder {
   color: var(--accent-dark);
   font-size: 1rem;
