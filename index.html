@@ -50,18 +50,16 @@
       </div>
       <div class="hero-visual">
         <div class="carousel">
-          <div class="carousel-viewport">
-            <div class="carousel-track">
-              <figure class="carousel-slide carousel-slide-transparent">
-                <img src="assets/product-can-main.png" alt="SnackSafe product can">
-              </figure>
-              <figure class="carousel-slide carousel-slide-card">
-                <img src="assets/product-can.png" alt="SnackSafe hidden in pantry">
-              </figure>
-              <figure class="carousel-slide carousel-slide-transparent">
-                <img src="assets/product-detail.jpg" alt="SnackSafe internal compartment">
-              </figure>
-            </div>
+          <div class="carousel-stage">
+            <figure class="carousel-slide carousel-slide-card active" data-index="0">
+              <img src="assets/product-can.png" alt="SnackSafe hidden in pantry">
+            </figure>
+            <figure class="carousel-slide carousel-slide-transparent" data-index="1">
+              <img src="assets/product-detail.jpg" alt="SnackSafe internal compartment">
+            </figure>
+            <figure class="carousel-slide carousel-slide-transparent" data-index="2">
+              <img src="assets/product-can-main.png" alt="SnackSafe product can">
+            </figure>
           </div>
           <div class="carousel-nav">
             <button class="carousel-btn" id="carousel-prev" aria-label="Previous image">&#8592;</button>
@@ -175,47 +173,34 @@
     </div>
   </footer>
   <script>
-    const viewport = document.querySelector('.carousel-viewport');
-    const track = document.querySelector('.carousel-track');
+    const slides = document.querySelectorAll('.carousel-slide');
     const dots = document.querySelectorAll('.carousel-dot');
-    const slideCount = 3;
-    const slideWidth = () => viewport.clientWidth;
+    const slideCount = slides.length;
+    let currentIndex = 0;
 
-    function updateDots(index) {
+    function renderCarousel(index) {
+      slides.forEach((slide, i) => slide.classList.toggle('active', i === index));
       dots.forEach((d, i) => d.classList.toggle('active', i === index));
     }
 
     function goToSlide(index) {
-      track.scrollTo({ left: index * slideWidth(), behavior: 'smooth' });
+      currentIndex = (index + slideCount) % slideCount;
+      renderCarousel(currentIndex);
     }
 
     document.getElementById('carousel-prev').addEventListener('click', () => {
-      const current = Math.round(track.scrollLeft / slideWidth());
-      const target = (current - 1 + slideCount) % slideCount;
-      goToSlide(target);
+      goToSlide(currentIndex - 1);
     });
 
     document.getElementById('carousel-next').addEventListener('click', () => {
-      const current = Math.round(track.scrollLeft / slideWidth());
-      const target = (current + 1) % slideCount;
-      goToSlide(target);
+      goToSlide(currentIndex + 1);
     });
 
     dots.forEach(dot => {
       dot.addEventListener('click', () => {
-        const index = parseInt(dot.dataset.index);
+        const index = Number(dot.dataset.index);
         goToSlide(index);
       });
-    });
-
-    track.addEventListener('scroll', () => {
-      const index = Math.round(track.scrollLeft / slideWidth());
-      updateDots(index);
-    });
-
-    window.addEventListener('resize', () => {
-      const index = Math.round(track.scrollLeft / Math.max(slideWidth(), 1));
-      track.scrollTo({ left: index * slideWidth(), behavior: 'auto' });
     });
   </script>
 </body>
