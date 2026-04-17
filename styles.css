@@ -478,31 +478,32 @@ li {
   position: fixed;
   top: 50%;
   transform: translateY(-50%);
-  width: 140px;
+  width: 220px;
   display: none;
   flex-direction: column;
   align-items: center;
-  gap: 0.4rem;
+  gap: 0.5rem;
   z-index: 100;
 }
 
-.rail-ad-left  { left: 8px; }
-.rail-ad-right { right: 8px; }
+.rail-ad-left  { left: 12px; }
+.rail-ad-right { right: 12px; }
 
 .rail-ad img {
   width: 100%;
-  border-radius: 8px;
+  border-radius: 10px;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.15);
 }
 
 .rail-label {
-  font-size: 0.65rem;
+  font-size: 0.68rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--muted);
   margin: 0;
 }
 
-@media (min-width: 1400px) {
+@media (min-width: 1500px) {
   .rail-ad { display: flex; }
 }
 
