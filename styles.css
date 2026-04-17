@@ -474,6 +474,14 @@ li {
   margin: 0 auto;
 }
 
+.partner-image-bottom {
+  width: 100%;
+  max-width: 320px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 8px;
+}
+
 .rail-ad {
   position: fixed;
   top: 50%;
