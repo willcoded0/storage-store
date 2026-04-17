@@ -474,6 +474,38 @@ li {
   margin: 0 auto;
 }
 
+.rail-ad {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 140px;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  z-index: 100;
+}
+
+.rail-ad-left  { left: 8px; }
+.rail-ad-right { right: 8px; }
+
+.rail-ad img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.rail-label {
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0;
+}
+
+@media (min-width: 1400px) {
+  .rail-ad { display: flex; }
+}
+
 .site-footer {
   display: flex;
   justify-content: space-between;
