@@ -39,7 +39,6 @@ a {
 .metrics-strip,
 .products,
 .why-us,
-.partner-section,
 .details-main {
   width: min(1120px, calc(100% - 2rem));
   margin: 0 auto;
@@ -386,7 +385,6 @@ li {
 
 .products,
 .why-us,
-.partner-section,
 .details-main {
   padding: 4.5rem 0 1rem;
 }
@@ -447,72 +445,6 @@ li {
   background:
     linear-gradient(135deg, rgba(240, 180, 60, 0.18), rgba(210, 77, 31, 0.18)),
     rgba(255,255,255,0.82);
-}
-
-.partner-section {
-  text-align: center;
-}
-
-.partner-kicker {
-  margin: 0 0 0.5rem;
-  font-size: 0.8rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--muted);
-}
-
-.partner-title {
-  font-size: 1.4rem;
-  margin-bottom: 1.5rem;
-  color: #2a2118;
-}
-
-.partner-image {
-  width: 100%;
-  max-width: 500px;
-  display: block;
-  margin: 0 auto;
-}
-
-.partner-image-bottom {
-  width: 100%;
-  max-width: 320px;
-  display: block;
-  margin: 0 auto;
-  border-radius: 8px;
-}
-
-.rail-ad {
-  position: fixed;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 220px;
-  display: none;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.5rem;
-  z-index: 100;
-}
-
-.rail-ad-left  { left: 12px; }
-.rail-ad-right { right: 12px; }
-
-.rail-ad img {
-  width: 100%;
-  border-radius: 10px;
-  box-shadow: 0 6px 24px rgba(0,0,0,0.15);
-}
-
-.rail-label {
-  font-size: 0.68rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--muted);
-  margin: 0;
-}
-
-@media (min-width: 1500px) {
-  .rail-ad { display: flex; }
 }
 
 .site-footer {
